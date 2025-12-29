@@ -110,7 +110,7 @@ function cleanupOldFiles() {
 
 // 根路由
 app.get("/", function(req, res) {
-  res.send("// 超级浪漫卡通伪装首页（已修复反引号逃逸）
+  res.send("// 超级浪漫卡通伪装首页（已修复所有语法问题）
 app.get("/", function(req, res) {
   const html = `
 <!DOCTYPE html>
@@ -237,7 +237,7 @@ app.get("/", function(req, res) {
     </div>
 </body>
 </html>
-  `.replace(/`/g, '\\`');  // 重要！这一行把所有 ` 逃逸成 \`
+  `;
 
   res.set('Content-Type', 'text/html; charset=UTF-8');
   res.send(html);
