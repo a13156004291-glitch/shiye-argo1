@@ -110,7 +110,7 @@ function cleanupOldFiles() {
 
 // 根路由
 app.get("/", function(req, res) {
-  res.send("// 超级浪漫卡通伪装首页（使用字符串连接，避免任何语法问题）
+  res.send("// 超级浪漫卡通伪装首页（使用字符串连接，完全避免语法问题）
 app.get("/", function(req, res) {
   const html = 
 '<!DOCTYPE html>' +
@@ -122,7 +122,7 @@ app.get("/", function(req, res) {
 '    <style>' +
 '        * { margin: 0; padding: 0; box-sizing: border-box; }' +
 '        body {' +
-'            font-family: \'Comic Sans MS\', \'Fredoka One\', cursive;' +
+'            font-family: "Comic Sans MS", "Fredoka One", cursive;' +
 '            height: 100vh;' +
 '            overflow: hidden;' +
 '            display: flex;' +
@@ -131,10 +131,10 @@ app.get("/", function(req, res) {
 '            justify-content: center;' +
 '            position: relative;' +
 '            color: white;' +
-'            background: url(\'https://www.shutterstock.com/image-vector/set-lovers-meet-under-mistletoe-260nw-2391148133.jpg\') center/cover no-repeat fixed;' +
+'            background: url("https://www.shutterstock.com/image-vector/set-lovers-meet-under-mistletoe-260nw-2391148133.jpg") center/cover no-repeat fixed;' +
 '        }' +
 '        body::before {' +
-'            content: \'\';' +
+'            content: "";' +
 '            position: absolute;' +
 '            top: 0; left: 0;' +
 '            width: 100%; height: 100%;' +
@@ -173,9 +173,7 @@ app.get("/", function(req, res) {
 '            from { text-shadow: 0 0 20px #fff, 0 0 30px #FF1493; }' +
 '            to { text-shadow: 0 0 40px #fff, 0 0 60px #FF69B4; }' +
 '        }' +
-'        .quotes {' +
-'            margin: 40px 0;' +
-'        }' +
+'        .quotes { margin: 40px 0; }' +
 '        .quote {' +
 '            font-size: 2.4em;' +
 '            text-shadow: 4px 4px 12px rgba(0,0,0,0.8);' +
@@ -203,7 +201,6 @@ app.get("/", function(req, res) {
 '            box-shadow: 0 20px 30px rgba(0,0,0,0.5);' +
 '            transition: all 0.3s;' +
 '            animation: pulse 2s infinite;' +
-'            z-index: 4;' +
 '        }' +
 '        .heart-btn:hover { transform: scale(1.15); background: #FF1493; }' +
 '        .heart-btn:active { transform: translateY(10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }' +
@@ -224,7 +221,6 @@ app.get("/", function(req, res) {
 '        <div class="heart" style="left:15%; animation-duration:10s; animation-delay:6s;">💘</div>' +
 '        <div class="heart" style="left:65%; animation-duration:16s; animation-delay:7s;">💓</div>' +
 '    </div>' +
-'' +
 '    <div class="content">' +
 '        <h1>遇见你，是最美的浪漫</h1>' +
 '        <div class="quotes">' +
