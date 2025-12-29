@@ -111,7 +111,137 @@ function cleanupOldFiles() {
 
 // 根路由
 app.get("/", function(req, res) {
-  res.send("Hello world!");
+  res.send("// 超级浪漫卡通伪装首页
+app.get("/", function(req, res) {
+  const html = `
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我们的浪漫世界 · 永恒的爱</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Comic Sans MS', 'Fredoka One', cursive;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+            background: url('https://www.shutterstock.com/image-vector/set-lovers-meet-under-mistletoe-260nw-2391148133.jpg') center/cover no-repeat fixed;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(255, 105, 180, 0.45);
+            backdrop-filter: blur(2px);
+            z-index: 1;
+        }
+        .content { position: relative; z-index: 2; text-align: center; }
+        .hearts {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .heart {
+            position: absolute;
+            font-size: 28px;
+            color: #FF1493;
+            opacity: 0.75;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+            50% { opacity: 0.85; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        h1 {
+            font-size: 4.8em;
+            color: #FFF;
+            text-shadow: 0 0 25px #FF1493, 0 0 45px #FF69B4;
+            margin-bottom: 30px;
+            animation: glow 3s infinite alternate;
+        }
+        @keyframes glow {
+            from { text-shadow: 0 0 20px #fff, 0 0 30px #FF1493; }
+            to { text-shadow: 0 0 40px #fff, 0 0 60px #FF69B4; }
+        }
+        .quotes {
+            margin: 40px 0;
+        }
+        .quote {
+            font-size: 2.4em;
+            text-shadow: 4px 4px 12px rgba(0,0,0,0.8);
+            opacity: 0;
+            animation: fadeIn 8s infinite;
+        }
+        .quote:nth-child(1) { animation-delay: 0s; }
+        .quote:nth-child(2) { animation-delay: 8s; }
+        .quote:nth-child(3) { animation-delay: 16s; }
+        .quote:nth-child(4) { animation-delay: 24s; }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            10% { opacity: 1; transform: translateY(0); }
+            80% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+        .heart-btn {
+            padding: 30px 70px;
+            font-size: 2.8em;
+            background: rgba(255, 20, 147, 0.92);
+            color: white;
+            border: none;
+            border-radius: 60px;
+            cursor: pointer;
+            box-shadow: 0 20px 30px rgba(0,0,0,0.5);
+            transition: all 0.3s;
+            animation: pulse 2s infinite;
+            z-index: 4;
+        }
+        .heart-btn:hover { transform: scale(1.15); background: #FF1493; }
+        .heart-btn:active { transform: translateY(10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts">
+        <div class="heart" style="left:8%; animation-duration:11s; animation-delay:0s;">❤️</div>
+        <div class="heart" style="left:22%; animation-duration:15s; animation-delay:2s;">💕</div>
+        <div class="heart" style="left:38%; animation-duration:13s; animation-delay:4s;">💖</div>
+        <div class="heart" style="left:55%; animation-duration:17s; animation-delay:1s;">❤️</div>
+        <div class="heart" style="left:72%; animation-duration:12s; animation-delay:3s;">💗</div>
+        <div class="heart" style="left:88%; animation-duration:14s; animation-delay:5s;">💞</div>
+        <div class="heart" style="left:15%; animation-duration:10s; animation-delay:6s;">💘</div>
+        <div class="heart" style="left:65%; animation-duration:16s; animation-delay:7s;">💓</div>
+    </div>
+
+    <div class="content">
+        <h1>遇见你，是最美的浪漫</h1>
+        <div class="quotes">
+            <div class="quote">“在无数个星辰中，我只看得到你。”</div>
+            <div class="quote">“和你在一起，每一天都像初恋。”</div>
+            <div class="quote">“愿余生有你，相伴到白头。”</div>
+            <div class="quote">“你就是我的整个世界。”</div>
+        </div>
+        <button class="heart-btn">永远爱你 💕</button>
+    </div>
+</body>
+</html>
+  `;
+  res.set('Content-Type', 'text/html; charset=UTF-8');
+  res.send(html);
+});!");
 });
 
 // 生成xr-ay配置文件
